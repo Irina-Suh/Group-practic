@@ -22,11 +22,43 @@
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart#examples
 
 
-const numb = +prompt('Введи число');
+/* const numb = +prompt('Введи число');
 let hours = numb / 60;
 let hour = Math.floor(hours);
 let min = numb % 60;
 let finHour = String(hour).padStart(2, "0");
 let finMin = String(min).padStart(2, "0");
 
-console.log(`${finHour}:${finMin}`);
+console.log(`${finHour}:${finMin}`); */
+
+
+//3. Напишіть цикл, який виводить в консоль
+//числа от max до min по зменьшенню
+//Виведіть в консоль суму усіх парних чисел
+// * перепиши код на функцію getNumbers(min, max)
+
+/* const max = 33;
+const min = 3;
+let total = 0;
+for (let i = max; i >= min; i--) {
+    if (i % 2 === 0) {
+        total += i
+    }
+    console.log(i)
+
+}
+console.log(total) */
+
+function getNumbers(min, max) {
+    let total = 0;
+    for (let i = max; i >= min; i--) {
+        if (i % 2 === 0) {
+            total += i
+        }
+        console.log(i)
+    }
+    return total
+}
+
+
+console.log(getNumbers(3, 33))
