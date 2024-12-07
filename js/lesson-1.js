@@ -91,19 +91,76 @@ console.log(total) */
 // функція має повертати "Not a number")
 // В якості дефолтного випадку повернути "Error!"
 
-function checkNumber(num) {
-  if (typeof num !== "number") {
-    return "Not a number";
-  }
-  if (num % 3 === 0 && num % 5 === 0) {
-    return "fizzbuzz";
-  }
-  if (num % 3 === 0) {
-    return "fizz";
-  }
-  if (num % 5 === 0) {
-    return "buzz";
-  }
-  return "Error!";
-}
-console.log(checkNumber(7));
+// function checkNumber(num) {
+//   if (typeof num !== "number") {
+//     return "Not a number";
+//   }
+//   if (num % 3 === 0 && num % 5 === 0) {
+//     return "fizzbuzz";
+//   }
+//   if (num % 3 === 0) {
+//     return "fizz";
+//   }
+//   if (num % 5 === 0) {
+//     return "buzz";
+//   }
+//   return "Error!";
+// }
+// console.log(checkNumber(7));
+
+//5. Напишіть код, який буде питати
+//логін за допомогою prompt и логіровати результат
+//в консоль браузера
+
+//Якщо користувач вводить "admin",
+//то prompt запрашує пароль.
+//Якщо нічого не ввели чи нажали Cancel
+//вивести в alert рядок "Cancel!"
+//В противному випадку вивести рядок "Who are you?!"
+
+//Пароль перевіряти так:
+//Якщо введен пароль "123456",
+//то вивести рядок "Welcome, boss!"
+//в іншому випадку виводити рядок "Wrong password!"
+
+// let login = prompt("Text your login");
+// let passRight = "123456";
+
+// if (login === "admin") {
+//     let pass = prompt("Text your password");
+
+//     if (passRight === pass) {
+//         alert("Welcome, boss!");
+//     }
+    
+//     else {
+//         alert("Wrong password!");
+//     }
+// }
+
+// else if (login === "" || login === null) {
+//     alert ("Cancel!");
+// }
+// else {
+//     alert("Who are you?!");
+// }
+
+
+// !------------------
+
+// 7. Напишіть функцію, яка перевертатиме рядок у зворотньому порядку
+// 8. Напишіть цикл, який пропонує ввести
+// число більше 100 через prompt.
+// Якщо користувач ввів інше число - попросити
+// ввести ще раз.
+// Цикл повинен питати число, доки користувач не
+// введе число більше 100, чи не натисне кнопку
+// Cancel в prompt
+// 9. В змінній minuteValue є число від 0 до 59.
+// Визначте до якої чверті години входить
+// це число(в першу, другу, треттю чи четверту).
+
+// const minuteValue = Math.floor(Math.random() * (59 - 0) + 0);
+// 10. Є рядок, який складається із символів, наприклад, 'abcde'.
+// Перевірте, що першим символом цього рядка є літера 'a'.
+// Якщо це так - виведіть в alert 'Yes', в іншому випадку - 'No'.
