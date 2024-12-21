@@ -42,15 +42,34 @@
 // checkLogin(logins)
 
 // 3. Напишіть функцію, яка складатиме сусідні числа і пушитиме їх в новий масив
-const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+// const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
 
-function newNumbers(array) {
-    let sum = [];
-    for (let i = 0; i < array.length-1; i++){
-        sum.push(array[i] + array[i + 1]);
+// function newNumbers(array) {
+//     let sum = [];
+//     for (let i = 0; i < array.length-1; i++){
+//         sum.push(array[i] + array[i + 1]);
         
-    }
-    return sum;
-}
+//     }
+//     return sum;
+// }
 
-console.log(newNumbers(someArr))
+// console.log(newNumbers(someArr))
+
+
+
+
+
+
+// 7. Напиши скрипт, який для об'єкту user,
+// послідовно:
+// 1 - додасть поле mood зі значенням 'happy'
+// 2 - замінить hobby на 'skydiving'
+// 3 - замінить значення premium на false
+// 4 - виводить зміст об'єкта user у форматі
+// '<ключ>:<значення>' використовуя Object.keys() та for...of
+// const user = {
+//     name: "John",
+//     age: 20,
+//     hobby: "tenis",
+//     premium: true,
+//   };
