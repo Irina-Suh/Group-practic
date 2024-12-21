@@ -57,6 +57,32 @@
 
 
 
+// 4. Напишіть функцію calculateAverage()
+// яка приймає довільну кількість
+// аргументів і повертає їхнє середнє значення.
+// Додати перевірку, що аргументи це числа.
+
+// function calculateAverage() {
+//   let sum = 0;
+//   let count = 0;
+
+//   for (const arg of arguments) {
+//     if (typeof arg === 'number') {
+//       sum += arg;
+//       count++;
+//     }
+//   }
+//   return count > 0 ? sum / count : 0;
+// }
+
+// console.log(calculateAverage(2, 4, 12, 23, 65, 4, 45, 20));
+// console.log(calculateAverage(2, 4, 12, 'єфвіа', 65, 4, 45, 20));
+// console.log(calculateAverage());
+
+
+
+
+
 
 
 
@@ -67,9 +93,26 @@
 // 3 - замінить значення premium на false
 // 4 - виводить зміст об'єкта user у форматі
 // '<ключ>:<значення>' використовуя Object.keys() та for...of
+
+
+
 // const user = {
 //     name: "John",
 //     age: 20,
 //     hobby: "tenis",
 //     premium: true,
 //   };
+
+
+// user.mood = 'happy'
+// user.hobby = 'skydiving'
+// user.premium = false
+
+// const userKeys = Object.keys(user)
+
+// for (const key of userKeys) {
+//     console.log(`${key}: ${user[key]}`)
+// }
+
+
+
