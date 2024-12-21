@@ -48,14 +48,12 @@
 //     let sum = [];
 //     for (let i = 0; i < array.length-1; i++){
 //         sum.push(array[i] + array[i + 1]);
-        
+
 //     }
 //     return sum;
 // }
 
 // console.log(newNumbers(someArr))
-
-
 
 // 4. Напишіть функцію calculateAverage()
 // яка приймає довільну кількість
@@ -79,13 +77,6 @@
 // console.log(calculateAverage(2, 4, 12, 'єфвіа', 65, 4, 45, 20));
 // console.log(calculateAverage());
 
-
-
-
-
-
-
-
 // 7. Напиши скрипт, який для об'єкту user,
 // послідовно:
 // 1 - додасть поле mood зі значенням 'happy'
@@ -94,15 +85,12 @@
 // 4 - виводить зміст об'єкта user у форматі
 // '<ключ>:<значення>' використовуя Object.keys() та for...of
 
-
-
 // const user = {
 //     name: "John",
 //     age: 20,
 //     hobby: "tenis",
 //     premium: true,
 //   };
-
 
 // user.mood = 'happy'
 // user.hobby = 'skydiving'
@@ -114,5 +102,43 @@
 //     console.log(`${key}: ${user[key]}`)
 // }
 
+// 9. Створіть об'єкт calculator з наступними методами:
+// read(a, b) - приймає два аргумента і зберігає їх
+// як властивості об'єкта
+// sum() повертає сумму збереженних значень (з перевіркою на наявність властивостей в об'єкті)
+// mult() перемножає збереженні значення і повертає результат (з перевіркою на наявність властивостей в об'єкті)
+// raise() возводить першу властивсть в ступінь другої і повертає результат (з перевіркою на наявність властивостей в об'єкті)
+// * винеси перевірку на наявність властивостей в об'єкті в окремий метод exist ()
 
+const calculator = {
+  read(a, b) {
+    this.valueA = a;
+    this.valueB = b;
+  },
+  exist() {
+    return this.valueA && this.valueB;
+  },
+  sum() {
+    if (this.exist()) {
+      return this.valueA + this.valueB;
+    }
+    return "Not value";
+  },
+  mult() {
+    if (this.exist()) {
+      return this.valueA * this.valueB;
+    }
+    return "Not value";
+  },
+  raice() {
+    if (this.exist()) {
+      return this.valueA ** this.valueB;
+    }
+    return "Not value";
+  },
+};
 
+console.log(calculator.read(10, 4));
+console.log(calculator.sum());
+console.log(calculator.mult());
+console.log(calculator.raice());
