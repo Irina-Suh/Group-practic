@@ -30,13 +30,27 @@
 
 // const logins = ["Peter", "John", "Igor", "Sasha"];
 
-function checkLogin(array) {
-    const name = prompt("Enter your name");
-    if (array.includes(name)) {
-        alert(`Welcome, ${name}!`);
-    } else {
-        alert("User not found");
+// function checkLogin(array) {
+//     const name = prompt("Enter your name");
+//     if (array.includes(name)) {
+//         alert(`Welcome, ${name}!`);
+//     } else {
+//         alert("User not found");
+//     }
+// }
+// const logins = ["Peter", "John", "Igor", "Sasha"];
+// checkLogin(logins)
+
+// 3. Напишіть функцію, яка складатиме сусідні числа і пушитиме їх в новий масив
+const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+
+function newNumbers(array) {
+    let sum = [];
+    for (let i = 0; i < array.length-1; i++){
+        sum.push(array[i] + array[i + 1]);
+        
     }
+    return sum;
 }
-const logins = ["Peter", "John", "Igor", "Sasha"];
-checkLogin(logins)
+
+console.log(newNumbers(someArr))
