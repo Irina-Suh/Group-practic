@@ -83,13 +83,30 @@ const tweets = [
 // }
 
 
-function getUsersWithGender(array, gender) {
-  return array.reduce((names, element) => {
-    if (element.gender === gender) {
-      names.push(element.name);
-    }
-    return names;
-  }, []);
+// function getUsersWithGender(array, gender) {
+//   return array.reduce((names, element) => {
+//     if (element.gender === gender) {
+//       names.push(element.name);
+//     }
+//     return names;
+//   }, []);
+// }
+
+// console.log(getUsersWithGender(tweets, "male"))
+
+
+
+
+
+// 4. Написати функцію getSortedUniqueTags(array), яка приймає масив
+// і повертає масив всіх тегів усіх користувачів (поле tags), при цьому не повинно бути
+// повторювань тегів і вони мають бути відсортовані в алфавітному порядку.
+// Використай ланцюжок методів.
+
+
+function getSortedUniqueTags(array) {
+  return array.flatMap(element => element.tags).filter((element, index, arr) => arr.indexOf(element) === index).toSorted((a, b) => a.localeCompare(b))
+
 }
 
-console.log(getUsersWithGender(tweets, "male"))
+console.log(getSortedUniqueTags(tweets))
